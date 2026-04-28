@@ -1,0 +1,2 @@
+import { Text, View } from 'react-native';
+export const BrandShowcase = () => <View style={{ marginTop: 16 }}><Text style={{ fontSize: 18, fontWeight: '700', marginBottom: 8 }}>Brand Showcase</Text><View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>{['FreshFarm','DailyMart','EcoFoods'].map((b)=><View key={b} style={{ borderWidth: 1, borderColor:'#eee', borderRadius:10,padding:10 }}><Text>{b}</Text></View>)}</View></View>;

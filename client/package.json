@@ -1,0 +1,9 @@
+{
+  "name": "ghorerbazar-client",
+  "private": true,
+  "scripts": {
+    "dev": "node api.js && next dev",
+    "build": "next build",
+    "start": "node api.js && next start"
+  }
+}
