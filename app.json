@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "GhorerBazar Mobile",
+    "slug": "ghorerbazar-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "ghorerbazar",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#16a34a"
+    },
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "backgroundColor": "#16a34a" } },
+    "plugins": ["expo-secure-store", "expo-notifications"],
+    "extra": { "apiBaseUrl": "http://localhost:5000/api/v1" }
+  }
+}
