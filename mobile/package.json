@@ -1,0 +1,10 @@
+{
+  "name": "ghorerbazar-mobile",
+  "private": true,
+  "main": "expo/AppEntry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  }
+}
