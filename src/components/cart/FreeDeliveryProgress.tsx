@@ -1,0 +1,2 @@
+import { Text, View } from 'react-native';
+export const FreeDeliveryProgress = ({ subtotal }: { subtotal: number }) => { const threshold=1000; const pct=Math.min((subtotal/threshold)*100,100); return <View><Text>{subtotal>=threshold?'Free delivery unlocked':`Add ৳${threshold-subtotal} for free delivery`}</Text><View style={{height:6, backgroundColor:'#e5e7eb', borderRadius:8}}><View style={{height:6, width:`${pct}%`, backgroundColor:'#16a34a', borderRadius:8}} /></View></View>; };
