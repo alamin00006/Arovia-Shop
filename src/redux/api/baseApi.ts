@@ -1,8 +1,13 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { logout } from '../features/auth/authSlice';
 
+const resolvedBaseUrl =
+  process.env.EXPO_PUBLIC_API_BASE_URL ||
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  'http://localhost:5000/api/v1';
+
 const rawBaseQuery = fetchBaseQuery({
-  baseUrl: process.env.EXPO_PUBLIC_API_BASE_URL,
+  baseUrl: resolvedBaseUrl,
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as any)?.auth?.accessToken;
     if (token) headers.set('Authorization', `Bearer ${token}`);
@@ -16,4 +21,9 @@ const baseQueryWith401: typeof rawBaseQuery = async (args, api, extra) => {
   return result;
 };
 
-export const baseApi = createApi({ reducerPath: 'api', baseQuery: baseQueryWith401, tagTypes: ['Product','Category','Brand','Cart','Wishlist','Order','Review','Banner','CMS','Delivery'], endpoints: () => ({}) });
+export const baseApi = createApi({
+  reducerPath: 'api',
+  baseQuery: baseQueryWith401,
+  tagTypes: ['Product', 'Category', 'Brand', 'Cart', 'Wishlist', 'Order', 'Review', 'Banner', 'CMS', 'Delivery'],
+  endpoints: () => ({})
+});
