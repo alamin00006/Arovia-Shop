@@ -1,0 +1,8 @@
+{
+  "name": "ghorerbazar-backend",
+  "private": true,
+  "scripts": {
+    "start:dev": "node init && nest start --watch",
+    "build": "node init && nest build"
+  }
+}
